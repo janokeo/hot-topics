@@ -1,0 +1,234 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Color Scheme: Analogous colors */
+:root {
+    --primary-color: #283593;  /* Dark blue */
+    --secondary-color: #3949ab; /* Medium blue */
+    --accent-color: #1e88e5;    /* Light blue */
+    --text-color: #ffffff;      /* White */
+    --background-color: #f3f4f6; /* Light grey */
+    --light-text-color: #757575; /* Light gray text */
+    --card-bg-color: #ffffff;    /* Card background */
+    --card-border-color: #e0e0e0; /* Card border */
+    --hover-color: #1a237e;      /* Darker blue for hover effects */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--light-text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.masthead {
+    background-image: url('background.jpg'); /* Use a suitable image */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.masthead h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article {
+    margin-bottom: 2rem;
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+article:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+article figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+article figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+article figure img:hover {
+    transform: scale(1.05);
+}
+
+article figure figcaption {
+    padding: 0.5rem;
+    font-style: italic;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Portfolio Styles */
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--card-border-color);
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (min-width: 35rem) {
+    body {
+        font-size: 1rem;
+    }
+
+    .masthead h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 50rem) {
+    .portfolio {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 80rem) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    header, main, footer {
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    .masthead {
+        padding: 6rem 0;
+    }
+
+    .masthead h2 {
+        font-size: 3rem;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
